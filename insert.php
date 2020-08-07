@@ -32,17 +32,15 @@ if(strlen($name) <= 50 && strlen($name) != 0)
 				$result->execute();
 
 				$arrayName = array('id' => $mysqli->insert_id, 'return' => "added" );
-				$data = json_encode($arrayName, JSON_UNESCAPED_UNICODE);
-
-
-				echo $data;
-				return;
-
 			}					
 		}		
 	}
 }
-$arrayName = array('id' => 0, 'return' => "error" );
+else
+{
+	$arrayName = array('id' => 0, 'return' => "error" );
+}
+
 $data = json_encode($arrayName, JSON_UNESCAPED_UNICODE);
 echo $data;
 

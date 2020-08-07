@@ -1,5 +1,5 @@
 <?php
-{
+
 	$server_name = "localhost";
 	$user_name = "root";
 	$password = "password";
@@ -52,14 +52,6 @@
 			}
 		}
 
-
-			
-
-		
-
-
-
-
 		$result = $mysqli->query($strquery);
 		$i = 1;
 		$j = 0;
@@ -84,22 +76,12 @@
 
 
 		}
-		
-		
-		
-		$data = json_encode($arrayName, JSON_UNESCAPED_UNICODE);
-
-
-		print_r($data) ;
-
 	}
 	else
 	{
-
-		$arrayName = array('message' => "Бд пуста" );
-		$data = json_encode($arrayName, JSON_UNESCAPED_UNICODE);
-
-
-		echo $data;
+		$arrayName = array('message' => "Бд пуста" );		
 	}
-}
+
+	
+$data = json_encode($arrayName, JSON_UNESCAPED_UNICODE);
+print_r($data) ;
